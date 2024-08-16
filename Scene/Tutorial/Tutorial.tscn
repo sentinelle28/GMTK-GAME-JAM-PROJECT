@@ -14,5 +14,6 @@ position = Vector2(113, 80)
 zoom = Vector2(5.9, 4.1)
 
 [node name="Player" parent="." node_paths=PackedStringArray("tilemap") instance=ExtResource("2_60m02")]
-position = Vector2(41, 77)
+position = Vector2(32, 32)
+scale = Vector2(2, 2)
 tilemap = NodePath("../OfficialTileMap")

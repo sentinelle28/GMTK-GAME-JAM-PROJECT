@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://ud2r5lg31nak"]
+
+[ext_resource type="Script" path="res://Entities/Portal/Portal.gd" id="1_ucj4l"]
+
+[node name="Portal" type="Node2D"]
+script = ExtResource("1_ucj4l")
+
+[node name="Enter" type="Area2D" parent="."]
+
+[node name="Exist" type="Area2D" parent="."]
+
+[connection signal="body_exited" from="Enter" to="." method="_on_enter_body_exited"]
+[connection signal="body_exited" from="Exist" to="." method="_on_exist_body_exited"]

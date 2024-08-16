@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Player
 @export var tilemap:TileMap
 
 
@@ -19,3 +20,7 @@ func _move()->void:
 			#update pos
 			global_position = tilemap.map_to_local(new_pos)
 			
+
+func _update_scale(new_scale:int)->void:
+	scale.x = new_scale
+	scale.y = new_scale
