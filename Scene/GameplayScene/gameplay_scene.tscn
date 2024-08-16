@@ -1,3 +1,10 @@
 [gd_scene format=3 uid="uid://duwqics5lukxb"]
 
 [node name="GameplayScene" type="Node2D"]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 180.0
+offset_top = 122.0
+offset_right = 469.0
+offset_bottom = 235.0
+text = "level 1"

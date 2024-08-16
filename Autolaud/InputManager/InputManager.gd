@@ -1,6 +1,9 @@
 extends Node
 
-var InputDict:Dictionary = {}
+var InputDict:Dictionary = {"ui_left":PlayerInput.new("ui_left"),
+"ui_right":PlayerInput.new("ui_right"),
+"ui_down":PlayerInput.new("ui_down"),
+"ui_up":PlayerInput.new("ui_up")}
 
 func _get_input(InputName:String)->bool:
 	""" Get the Input if possible
@@ -37,3 +40,8 @@ func _get_vector(InputArray:Array[String])->Vector2:
 	"""
 	return Vector2(_get_axis([InputArray[0],InputArray[1]]),_get_axis([InputArray[2],InputArray[3]]))
 	
+func _verify_input_press()->bool:
+	for input in InputDict:
+		if _get_input(input):
+			return true
+	return false

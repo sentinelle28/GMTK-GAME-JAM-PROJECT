@@ -1,0 +1,9 @@
+res://Scene/GameplayScene/gameplay_scene.tscn
+res://Scene/Tutorial/Tutorial.tscn
+res://Common/OfficialTileMap/OfficialTileMap.tscn
+res://Entities/Character/Player/player.tscn
+res://Autolaud/Level/LevelUnlock.gd
+res://Entities/Character/Player/player.gd
+res://Scene/Main/main.tscn
+res://Autolaud/InputManager/InputManager.gd
+res://Entities/Character/Player/PlayerRelatedClass/Input/PlayerInput.gd

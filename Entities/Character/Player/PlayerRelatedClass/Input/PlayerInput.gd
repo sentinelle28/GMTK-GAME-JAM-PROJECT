@@ -5,6 +5,9 @@ class_name PlayerInput
 @export var CanUseInput:bool = true
 @export var MustBePressed:bool = false
 
+func _init(nameOfTheInput:String)->void:
+	InputName = nameOfTheInput
+
 func _get_input_pressed()->bool:
 	"""  Return a true if the player perfomed the action and has permission"""
 	if MustBePressed:
