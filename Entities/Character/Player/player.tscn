@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c2m686hwo4aax" path="res://Asset/TextureAsset/player/pixil-frame-27.png" id="5_vxt7b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jp3ow"]
-size = Vector2(63, 63)
+size = Vector2(62, 63)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xq80p"]
 animations = [{

@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://dyfvltr6s4hgj"]
+
+[ext_resource type="Script" path="res://Entities/block/Block.gd" id="1_rlw6t"]
+[ext_resource type="Texture2D" uid="uid://dljowftyxd65n" path="res://Asset/TextureAsset/block/pixil-frame-1.png" id="2_cbyg3"]
+[ext_resource type="PackedScene" uid="uid://bhxaaygow1bck" path="res://Entities/block/DecoyBlock.tscn" id="2_g8ion"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pc2h2"]
+size = Vector2(63, 63)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ak1f4"]
+size = Vector2(63, 63)
+
+[node name="Block" type="CharacterBody2D"]
+script = ExtResource("1_rlw6t")
+decoyre = ExtResource("2_g8ion")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_pc2h2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_cbyg3")
+
+[node name="Area2D" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_ak1f4")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

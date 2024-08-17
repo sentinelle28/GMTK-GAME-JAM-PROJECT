@@ -7,7 +7,7 @@ func _physics_process(_delta:float)->void:
 	""" Main function"""
 	
 	_move()
-	move_and_slide()
+	
 
 func _move()->void:
 	
@@ -21,6 +21,7 @@ func _move()->void:
 		if direction != Vector2i.ZERO:
 			$AnimationTree["parameters/blend_position"] = Vector2(direction)
 			
+		
 		#verify it's not a wall
 		if _check_move(direction):
 			#update pos
@@ -29,22 +30,26 @@ func _move()->void:
 			
 		
 func _update_scale(Scale:float)->void:
-	var new_scale:int = Scale
+	var new_scale:float = Scale
 	if scale.x*new_scale >= 1:
 		scale.x *= new_scale
 		scale.y *= new_scale
+		
 	elif scale.x * new_scale < 1:
+		
+		
 		scale.x = 1
 		scale.y = 1
-
 
 func _check_move(direction:Vector2i)->bool:
 	
 	var collid_info:KinematicCollision2D = move_and_collide(direction*Size,true)
 	if collid_info != null:
+		if collid_info.get_collider() is PushableEntities:
+			collid_info.get_collider()._push(self,direction)
 		return false
 	else:
 		return true
 
 func _move_towards(direction:Vector2)->void:
-	global_position += direction*Vector2(Size)
+	move_and_collide(direction * Vector2(Size))

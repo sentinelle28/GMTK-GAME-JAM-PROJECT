@@ -19,6 +19,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 104.0
+offset_right = 30.0
+offset_bottom = 104.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -29,24 +33,9 @@ position = Vector2(171, -45)
 layout_mode = 2
 text = "Play"
 
-[node name="Settings" type="Button" parent="Control/VBoxContainer"]
-layout_mode = 2
-text = "Setting"
-
-[node name="Credits" type="Button" parent="Control/VBoxContainer"]
-layout_mode = 2
-text = "Credits"
-
 [node name="tutorial" type="Button" parent="Control/VBoxContainer"]
 layout_mode = 2
 text = "tutorial"
 
-[node name="Quit" type="Button" parent="Control/VBoxContainer"]
-layout_mode = 2
-text = "Quit"
-
 [connection signal="pressed" from="Control/VBoxContainer/play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/tutorial" to="." method="_on_tutorial_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

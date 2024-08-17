@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://jvyf2wj8hmn7"]
+
+[ext_resource type="PackedScene" uid="uid://d177hhg5524ed" path="res://Common/activable_cell/activable_cell.tscn" id="1_nley1"]
+[ext_resource type="Texture2D" uid="uid://bl6nd3yf2smre" path="res://Asset/TextureAsset/lava/pixil-frame-3.png" id="2_m2w0l"]
+
+[node name="Activable_cell" instance=ExtResource("1_nley1")]
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="1"]
+z_index = -1
+texture = ExtResource("2_m2w0l")

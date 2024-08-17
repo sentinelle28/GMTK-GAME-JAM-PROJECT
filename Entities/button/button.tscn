@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqxyg2pgc1b03"]
+
+[ext_resource type="Script" path="res://Entities/button/Button.gd" id="1_qm2ru"]
+
+[node name="Button" type="Node2D"]
+script = ExtResource("1_qm2ru")

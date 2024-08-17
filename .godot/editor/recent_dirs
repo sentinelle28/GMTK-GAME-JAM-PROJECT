@@ -1,3 +1,10 @@
+res://Entities/block
+res://Asset/TextureAsset/block
+res://Entities/water
+res://Asset/TextureAsset/lava
+res://Entities/button
+res://Asset/TextureAsset/button
+res://Common/activable_cell
 res://Entities/fruit
 res://Asset/TextureAsset/fruit
 res://Asset/TextureAsset/player

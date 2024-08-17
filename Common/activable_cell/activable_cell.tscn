@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://d177hhg5524ed"]
+
+[ext_resource type="Script" path="res://Common/activable_cell/activable_cell.gd" id="1_g7wui"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ae212"]
+size = Vector2(32, 32)
+
+[node name="Activable_cell" type="Area2D"]
+script = ExtResource("1_g7wui")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ae212")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
