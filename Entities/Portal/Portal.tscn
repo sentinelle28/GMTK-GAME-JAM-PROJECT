@@ -1,13 +1,53 @@
-[gd_scene load_steps=2 format=3 uid="uid://ud2r5lg31nak"]
+[gd_scene load_steps=4 format=3 uid="uid://ud2r5lg31nak"]
 
-[ext_resource type="Script" path="res://Entities/Portal/Portal.gd" id="1_ucj4l"]
+[ext_resource type="Script" path="res://Entities/Portal/PortalTweens.gd" id="2_7k0ok"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_73ofj"]
+size = Vector2(15, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hruy7"]
+size = Vector2(15, 15)
 
 [node name="Portal" type="Node2D"]
-script = ExtResource("1_ucj4l")
 
-[node name="Enter" type="Area2D" parent="."]
+[node name="Enter" type="Area2D" parent="." node_paths=PackedStringArray("TweenOfThePortal")]
+position = Vector2(16, 0)
+script = ExtResource("2_7k0ok")
+TweenOfThePortal = NodePath("../Exist")
+direction = Vector2i(0, -1)
 
-[node name="Exist" type="Area2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enter"]
+position = Vector2(-8, 8)
+shape = SubResource("RectangleShape2D_73ofj")
 
-[connection signal="body_exited" from="Enter" to="." method="_on_enter_body_exited"]
+[node name="ColorRect" type="ColorRect" parent="Enter"]
+z_index = -1
+offset_left = -16.0
+offset_bottom = 16.0
+color = Color(0, 1, 1, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Exist" type="Area2D" parent="." node_paths=PackedStringArray("TweenOfThePortal")]
+position = Vector2(16, 0)
+script = ExtResource("2_7k0ok")
+ScaleToApply = 2
+TweenOfThePortal = NodePath("../Enter")
+direction = Vector2i(0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exist"]
+position = Vector2(0, -16)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_hruy7")
+
+[node name="ColorRect" type="ColorRect" parent="Exist"]
+process_mode = 4
+z_index = -1
+offset_left = -16.0
+offset_top = -32.0
+offset_bottom = -16.0
+scale = Vector2(2, 2)
+color = Color(1, 0.443137, 0.0627451, 1)
+metadata/_edit_use_anchors_ = true
+
+[connection signal="body_entered" from="Enter" to="Enter" method="_on_body_entered"]
 [connection signal="body_exited" from="Exist" to="." method="_on_exist_body_exited"]

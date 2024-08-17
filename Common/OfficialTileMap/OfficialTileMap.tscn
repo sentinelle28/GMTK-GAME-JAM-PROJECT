@@ -328,6 +328,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_c78af")
 
 [node name="OfficialTileMap" type="TileMap"]
+z_index = -100
 tile_set = SubResource("TileSet_2231o")
 format = 2
 layer_0/name = "ground"

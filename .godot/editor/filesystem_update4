@@ -1,7 +1,7 @@
 res://Entities/Character/Player/player.tscn
 res://Entities/Character/Player/player.gd
-res://Entities/Portal/Portal.tscn
-res://Entities/Portal/Portal.gd
-res://Scene/Tutorial/Tutorial.tscn
 res://Scene/Main/main.tscn
+res://Scene/Tutorial/Tutorial.tscn
 res://Common/OfficialTileMap/OfficialTileMap.tscn
+res://Entities/Portal/Portal.tscn
+res://Entities/Portal/PortalTweens.gd
