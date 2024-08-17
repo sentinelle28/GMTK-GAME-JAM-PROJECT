@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cy2kcfdwbia1v"]
+
+[ext_resource type="Script" path="res://Common/fruit/fruit.gd" id="1_orcec"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hj2jq"]
+size = Vector2(63, 63)
+
+[node name="fruit" type="Node2D"]
+script = ExtResource("1_orcec")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_hj2jq")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

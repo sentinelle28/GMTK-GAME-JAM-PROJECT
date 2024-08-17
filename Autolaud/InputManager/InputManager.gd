@@ -30,7 +30,7 @@ func _get_axis(InputArray:Array[String])->int:
 	else:
 		return 0
 	
-func _get_vector(InputArray:Array[String])->Vector2:
+func _get_vector(InputArray:Array[String])->Vector2i:
 	""" Return the vector corresponding to the movement of the player
 	Arg:
 		InputArray:Array[String] -> len() == 4 because we want a vector

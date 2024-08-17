@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpegu4j60l0e2"]
+
+[ext_resource type="PackedScene" uid="uid://cy2kcfdwbia1v" path="res://Common/fruit/fruit.tscn" id="1_u1ysk"]
+[ext_resource type="Texture2D" uid="uid://cbcevo4cp7kfp" path="res://Asset/TextureAsset/fruit/pixil-layer-Background.png" id="2_crr4b"]
+
+[node name="berry" instance=ExtResource("1_u1ysk")]
+New_scale = 2.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_crr4b")

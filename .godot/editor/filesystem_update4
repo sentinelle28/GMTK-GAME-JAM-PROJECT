@@ -1,7 +1,10 @@
+res://Entities/fruit/fruit.tscn
+res://Scene/Tutorial/Tutorial.tscn
+res://Entities/fruit/ananas.tscn
+res://Common/fruit/fruit.tscn
+res://Common/fruit/fruit.gd
 res://Entities/Character/Player/player.tscn
 res://Entities/Character/Player/player.gd
+res://Entities/fruit/berry.tscn
 res://Scene/Main/main.tscn
-res://Scene/Tutorial/Tutorial.tscn
 res://Common/OfficialTileMap/OfficialTileMap.tscn
-res://Entities/Portal/Portal.tscn
-res://Entities/Portal/PortalTweens.gd
