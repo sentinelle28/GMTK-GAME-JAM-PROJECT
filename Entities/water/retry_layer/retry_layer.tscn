@@ -1,30 +1,34 @@
-[gd_scene load_steps=5 format=3 uid="uid://q3fg7fa36ckk"]
+[gd_scene load_steps=6 format=3 uid="uid://q3fg7fa36ckk"]
 
 [ext_resource type="PackedScene" uid="uid://ce6vsbcffvm4c" path="res://Common/label/LabelPrefab.tscn" id="1_bplpb"]
 [ext_resource type="Script" path="res://Entities/water/retry_layer/retry_layer.gd" id="1_rtmin"]
+[ext_resource type="FontFile" uid="uid://bac1ge1jx17ei" path="res://Asset/FontAsset/Nobile-Regular.ttf" id="3_dq1gh"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_nr7w4"]
+[sub_resource type="LabelSettings" id="LabelSettings_n484n"]
+font = ExtResource("3_dq1gh")
 font_size = 30
+font_color = Color(0, 0, 0, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_iuych"]
-font_size = 20
+[sub_resource type="LabelSettings" id="LabelSettings_7rrc2"]
+font = ExtResource("3_dq1gh")
+font_size = 30
+font_color = Color(0, 0, 0, 1)
 
 [node name="CanvasLayer" type="CanvasLayer"]
-visible = false
 script = ExtResource("1_rtmin")
 
 [node name="LabelPrefab" parent="." instance=ExtResource("1_bplpb")]
-offset_left = 360.0
-offset_top = 64.0
-offset_right = 731.0
-offset_bottom = 106.0
+offset_left = 344.0
+offset_top = 88.0
+offset_right = 715.0
+offset_bottom = 130.0
 text = "You went for a small swin"
-label_settings = SubResource("LabelSettings_nr7w4")
+label_settings = SubResource("LabelSettings_n484n")
 
 [node name="LabelPrefab2" parent="." instance=ExtResource("1_bplpb")]
-offset_left = 448.0
-offset_top = 384.0
-offset_right = 606.0
-offset_bottom = 412.0
+offset_left = 416.0
+offset_top = 520.0
+offset_right = 656.0
+offset_bottom = 555.0
 text = "Press 'R' to retry"
-label_settings = SubResource("LabelSettings_iuych")
+label_settings = SubResource("LabelSettings_7rrc2")

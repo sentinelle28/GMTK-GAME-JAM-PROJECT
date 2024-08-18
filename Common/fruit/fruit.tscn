@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cy2kcfdwbia1v"]
+[gd_scene load_steps=4 format=3 uid="uid://cy2kcfdwbia1v"]
 
 [ext_resource type="Script" path="res://Common/fruit/fruit.gd" id="1_orcec"]
+[ext_resource type="AudioStream" uid="uid://pi5w0qarg1xj" path="res://Asset/AudioAsset/SFX/eat_fruit.tres" id="2_7p2fy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_snta0"]
 size = Vector2(62, 62)
@@ -14,3 +15,6 @@ shape = SubResource("RectangleShape2D_snta0")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
 autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_7p2fy")

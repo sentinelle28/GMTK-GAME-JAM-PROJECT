@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dyfvltr6s4hgj"]
+[gd_scene load_steps=7 format=3 uid="uid://dyfvltr6s4hgj"]
 
 [ext_resource type="Script" path="res://Entities/block/Block.gd" id="1_rlw6t"]
 [ext_resource type="Texture2D" uid="uid://dljowftyxd65n" path="res://Asset/TextureAsset/block/pixil-frame-1.png" id="2_cbyg3"]
 [ext_resource type="PackedScene" uid="uid://bhxaaygow1bck" path="res://Entities/block/DecoyBlock.tscn" id="2_g8ion"]
+[ext_resource type="AudioStream" uid="uid://dsjdlymy400cj" path="res://Asset/AudioAsset/SFX/block.tres" id="4_6jt0c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pc2h2"]
 size = Vector2(63, 63)
@@ -25,5 +26,8 @@ monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_ak1f4")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_6jt0c")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

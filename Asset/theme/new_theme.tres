@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cynf8bkxl48rb"]
+
+[ext_resource type="FontFile" uid="uid://bac1ge1jx17ei" path="res://Asset/FontAsset/Nobile-Regular.ttf" id="1_dd66d"]
+
+[resource]
+default_font = ExtResource("1_dd66d")
+default_font_size = 20

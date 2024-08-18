@@ -1,13 +1,15 @@
+res://Asset/TextureAsset/button
+res://Asset/AudioAsset/SFX
+res://Asset/theme
+res://Asset/FontAsset
 res://Scene/Levels
 res://Autolaud/paused_menu
 res://Autolaud/Settings
-res://Entities/retry_layer
 res://Entities/block
 res://Asset/TextureAsset/block
 res://Entities/water
 res://Asset/TextureAsset/lava
 res://Entities/button
-res://Asset/TextureAsset/button
 res://Common/activable_cell
 res://Entities/fruit
 res://Asset/TextureAsset/fruit

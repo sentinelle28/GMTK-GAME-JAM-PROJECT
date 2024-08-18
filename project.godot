@@ -23,6 +23,10 @@ Settings="*res://Autolaud/Settings/Settings.gd"
 MainMusic="*res://Autolaud/MainMusic/main_music.tscn"
 PauseMenu="*res://Autolaud/paused_menu/pause_menu.tscn"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_sfxr/plugin.cfg")
+
 [input]
 
 retry={

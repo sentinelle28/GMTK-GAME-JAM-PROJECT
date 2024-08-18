@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://ce6vsbcffvm4c"]
+[gd_scene load_steps=3 format=3 uid="uid://ce6vsbcffvm4c"]
+
+[ext_resource type="FontFile" uid="uid://bac1ge1jx17ei" path="res://Asset/FontAsset/Nobile-Regular.ttf" id="1_7adml"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_44s8v"]
+font = ExtResource("1_7adml")
 font_size = 20
-font_color = Color(1, 0, 1, 1)
+font_color = Color(0, 0, 0, 1)
 
 [node name="LabelPrefab" type="Label"]
 label_settings = SubResource("LabelSettings_44s8v")

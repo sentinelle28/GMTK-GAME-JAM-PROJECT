@@ -32,6 +32,7 @@ func _move()->void:
 		
 		if direction != Vector2i.ZERO:
 			$AnimationTree["parameters/blend_position"] = Vector2(direction)
+			$walk.play()
 			
 		
 		#verify it's not a wall 
@@ -52,7 +53,8 @@ func _update_scale(Scale:float)->void:
 		
 		scale.x = 1
 		scale.y = 1
-
+	$fruit.play()
+	
 func _check_move(direction:Vector2i)->bool:
 	
 	var collid_info:KinematicCollision2D = move_and_collide(direction*Size,true)

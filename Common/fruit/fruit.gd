@@ -11,9 +11,10 @@ func _ready()->void:
 
 func _push(body:CharacterBody2D,direction):
 	if body is Player:
-		
+		$AudioStreamPlayer.play()
 		body._update_scale(New_scale)
 		body.global_position = Point.global_position
+		
 		queue_free()
 	else:
 		if _check_move(direction):

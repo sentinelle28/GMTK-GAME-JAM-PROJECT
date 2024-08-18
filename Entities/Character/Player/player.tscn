@@ -1,10 +1,12 @@
-[gd_scene load_steps=18 format=3 uid="uid://dxcqexn6fvbu4"]
+[gd_scene load_steps=20 format=3 uid="uid://dxcqexn6fvbu4"]
 
 [ext_resource type="Script" path="res://Entities/Character/Player/player.gd" id="1_325if"]
 [ext_resource type="Texture2D" uid="uid://cci5mfh5y51yo" path="res://Asset/TextureAsset/player/pixil-frame-28.png" id="2_juxcq"]
 [ext_resource type="Texture2D" uid="uid://bbyfh6fb7gm47" path="res://Asset/TextureAsset/player/pixil-frame-25.png" id="2_qt5q1"]
 [ext_resource type="Texture2D" uid="uid://dq1jeosb48u7k" path="res://Asset/TextureAsset/player/pixil-frame-29.png" id="3_8kpfi"]
 [ext_resource type="Texture2D" uid="uid://c2m686hwo4aax" path="res://Asset/TextureAsset/player/pixil-frame-27.png" id="5_vxt7b"]
+[ext_resource type="AudioStream" uid="uid://s4ymnea8dxy" path="res://Asset/AudioAsset/SFX/walk.tres" id="6_j5cbt"]
+[ext_resource type="AudioStream" uid="uid://pi5w0qarg1xj" path="res://Asset/AudioAsset/SFX/eat_fruit.tres" id="7_nefnu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jp3ow"]
 size = Vector2(62, 63)
@@ -212,3 +214,11 @@ libraries = {
 tree_root = SubResource("AnimationNodeBlendSpace2D_p8cnq")
 anim_player = NodePath("../AnimationPlayer")
 parameters/blend_position = Vector2(1, 0)
+
+[node name="walk" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_j5cbt")
+bus = &"sfx"
+
+[node name="fruit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_nefnu")
+bus = &"sfx"

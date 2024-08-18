@@ -1,10 +1,30 @@
-[gd_scene load_steps=3 format=3 uid="uid://bymd3ps1a3sq"]
+[gd_scene load_steps=5 format=3 uid="uid://bymd3ps1a3sq"]
 
 [ext_resource type="PackedScene" uid="uid://d177hhg5524ed" path="res://Common/activable_cell/activable_cell.tscn" id="1_gy148"]
 [ext_resource type="Texture2D" uid="uid://eo2s7x27d370" path="res://Asset/TextureAsset/button/pixil-frame-0.png" id="2_7fwu5"]
+[ext_resource type="Texture2D" uid="uid://dwtgnevum1yhv" path="res://Asset/TextureAsset/button/pressed_button.png" id="2_g4klj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gllq0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_g4klj")
+}],
+"loop": true,
+"name": &"activated",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_7fwu5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Activable_cell" instance=ExtResource("1_gy148")]
 
-[node name="Sprite2D" type="Sprite2D" parent="." index="1"]
-z_index = -1
-texture = ExtResource("2_7fwu5")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_gllq0")
+autoplay = "default"

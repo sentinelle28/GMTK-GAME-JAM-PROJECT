@@ -1,3 +1,6 @@
+AnimatedSprite2D
+SfxrStreamPlayer
+AudioStreamPlayer
 Camera2D
 Node2D
 AnimationPlayer
@@ -10,6 +13,3 @@ CollisionShape2D
 Area2D
 ActivationManager
 ColorRect
-StaticBody2D
-PushableEntities
-TileMap

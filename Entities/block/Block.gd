@@ -12,3 +12,9 @@ func _on_area_2d_area_entered(area)->void:
 				area.get_parent()._change_value(-1)
 			area.queue_free()
 			queue_free()
+
+func _push(body:CharacterBody2D,direction):
+	if _check_move(direction):
+		_move_towards(direction)
+		body._move_towards(direction)
+		$AudioStreamPlayer.play()

@@ -3,6 +3,8 @@ extends ActivationManager
 @export var door:StaticBody2D
 func _activate()->void:
 	door.get_node("animator").play("Open")
+	for child:Activable_Cell in get_children():
+		child._change()
 	await get_tree().create_timer(1).timeout
 	door.queue_free()
 
