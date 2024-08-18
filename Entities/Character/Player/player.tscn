@@ -9,7 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://pi5w0qarg1xj" path="res://Asset/AudioAsset/SFX/eat_fruit.tres" id="7_nefnu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jp3ow"]
-size = Vector2(62, 63)
+size = Vector2(63, 63)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xq80p"]
 animations = [{
@@ -222,3 +222,5 @@ bus = &"sfx"
 [node name="fruit" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_nefnu")
 bus = &"sfx"
+
+[node name="Stocker" type="Node2D" parent="."]

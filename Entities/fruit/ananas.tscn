@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://87ckocwom8tx" path="res://Asset/TextureAsset/fruit/pixil-layer-Background - Frame1.png" id="2_0dnkh"]
 
 [node name="ananas" instance=ExtResource("1_11kcf")]
-New_scale = 2
 is_inverted = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="1"]

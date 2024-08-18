@@ -169,6 +169,7 @@ sources/2 = SubResource("TileSetAtlasSource_tnvmn")
 [node name="OfficialTileMap" type="TileMap"]
 z_index = -100
 tile_set = SubResource("TileSet_2231o")
+collision_visibility_mode = 1
 format = 2
 layer_0/name = "ground"
 layer_1/name = "wall"

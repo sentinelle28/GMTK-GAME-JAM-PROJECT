@@ -4,7 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://pi5w0qarg1xj" path="res://Asset/AudioAsset/SFX/eat_fruit.tres" id="2_7p2fy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_snta0"]
-size = Vector2(62, 62)
+size = Vector2(63, 63)
 
 [node name="fruit" type="CharacterBody2D"]
 script = ExtResource("1_orcec")

@@ -2,20 +2,22 @@ extends CharacterBody2D
 
 class_name PushableEntities
 @export var Size:Vector2i = Vector2(64,64)
+@onready var player:Player = get_node("../Player")
 
-func _check_move(direction:Vector2i)->bool:
-	var collid_info:KinematicCollision2D = move_and_collide(direction*Size,true)
-	if collid_info != null:
-		if collid_info.get_collider() is PushableEntities:
-			collid_info.get_collider()._push(self,direction)
+func _move_towards(direction:Vector2)->void:
+	var collid:KinematicCollision2D = move_and_collide(direction * scale.x,true)
+	
+	if collid != null:
+		if collid.get_collider() is PushableEntities:
+			collid.get_collider()._push(direction)
+	player.CollisionArray.append(self)
+
+func _push(direction:Vector2)->void:
+	_move_towards(direction)
+
+func _check_collision(direction:Vector2)->bool:
+	var collid:KinematicCollision2D = move_and_collide(direction * scale.x,true)
+	if collid!=null:
 		return false
 	else:
 		return true
-
-func _move_towards(direction:Vector2)->void:
-	global_position += direction*Vector2(Size)
-
-func _push(body:CharacterBody2D,direction):
-	if _check_move(direction):
-		_move_towards(direction)
-		body._move_towards(direction)

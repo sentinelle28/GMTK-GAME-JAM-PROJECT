@@ -13,8 +13,7 @@ func _on_area_2d_area_entered(area)->void:
 			area.queue_free()
 			queue_free()
 
-func _push(body:CharacterBody2D,direction):
-	if _check_move(direction):
-		_move_towards(direction)
-		body._move_towards(direction)
-		$AudioStreamPlayer.play()
+
+func _push(direction:Vector2)->void:
+	_move_towards(direction)
+	$AudioStreamPlayer.play()
