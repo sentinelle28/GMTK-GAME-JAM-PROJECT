@@ -45,3 +45,7 @@ func _verify_input_press()->bool:
 		if _get_input(input):
 			return true
 	return false
+
+func _set_input(value:bool)->void:
+	for elt in InputDict:
+		InputDict[elt]._change_access(value)

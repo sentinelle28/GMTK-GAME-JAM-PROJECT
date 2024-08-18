@@ -5,9 +5,21 @@ class_name Player
 
 func _physics_process(_delta:float)->void:
 	""" Main function"""
-	
+	_pause()
 	_move()
 	
+func _pause()->void:
+	if Input.is_action_just_pressed("quit"):
+		PauseMenu.show()
+		get_tree().paused = true
+	if Input.is_action_just_pressed("retry"):
+		call_deferred("_reaload")
+		
+
+func _reaload()->void:
+	InputManager._set_input(true)
+	get_tree().reload_current_scene()
+
 
 func _move()->void:
 	
@@ -22,7 +34,7 @@ func _move()->void:
 			$AnimationTree["parameters/blend_position"] = Vector2(direction)
 			
 		
-		#verify it's not a wall
+		#verify it's not a wall 
 		if _check_move(direction):
 			#update pos
 			_move_towards(direction)
@@ -52,4 +64,7 @@ func _check_move(direction:Vector2i)->bool:
 		return true
 
 func _move_towards(direction:Vector2)->void:
-	move_and_collide(direction * Vector2(Size))
+	var collid:KinematicCollision2D = move_and_collide(direction * Vector2(Size) * scale.x)
+	if collid !=null:
+		if collid.get_collider() is PushableEntities:
+			collid.get_collider()._push(self,direction)

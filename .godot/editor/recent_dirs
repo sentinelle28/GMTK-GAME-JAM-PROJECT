@@ -1,3 +1,7 @@
+res://Scene/Levels
+res://Autolaud/paused_menu
+res://Autolaud/Settings
+res://Entities/retry_layer
 res://Entities/block
 res://Asset/TextureAsset/block
 res://Entities/water

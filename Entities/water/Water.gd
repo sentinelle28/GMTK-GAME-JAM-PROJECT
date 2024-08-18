@@ -2,9 +2,8 @@ extends ActivationManager
 
 class_name Water
 
-func _activate()->void:
-	call_deferred("_other")
-	
+@export var Layer:CanvasLayer
 
-func _other()->void:
-	get_tree().reload_current_scene()
+func _activate()->void:
+	Layer.show()
+	InputManager._set_input(false)

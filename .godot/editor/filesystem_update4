@@ -1,13 +1,6 @@
-res://Entities/block/Block.tscn
-res://Entities/block/Block.gd
-res://Scene/Main/main.tscn
 res://Scene/Tutorial/Tutorial.tscn
+res://Scene/Levels/level_1.tscn
+res://Scene/Main/main.tscn
 res://Entities/Character/Player/player.tscn
-res://Common/fruit/fruit.tscn
-res://Entities/block/DecoyBlock.tscn
-res://Entities/water/lava_activable_cell.tscn
-res://Entities/water/Water.gd
-res://Entities/button/button.tscn
-res://Common/activable_cell/activation_manager.gd
-res://Entities/button/Button.gd
-res://Entities/button/button_activable_cell.tscn
+res://Entities/Character/Player/player.gd
+res://Common/fruit/fruit.gd

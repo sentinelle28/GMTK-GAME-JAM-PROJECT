@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://q3fg7fa36ckk"]
+
+[ext_resource type="PackedScene" uid="uid://ce6vsbcffvm4c" path="res://Common/label/LabelPrefab.tscn" id="1_bplpb"]
+[ext_resource type="Script" path="res://Entities/water/retry_layer/retry_layer.gd" id="1_rtmin"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nr7w4"]
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_iuych"]
+font_size = 20
+
+[node name="CanvasLayer" type="CanvasLayer"]
+visible = false
+script = ExtResource("1_rtmin")
+
+[node name="LabelPrefab" parent="." instance=ExtResource("1_bplpb")]
+offset_left = 360.0
+offset_top = 64.0
+offset_right = 731.0
+offset_bottom = 106.0
+text = "You went for a small swin"
+label_settings = SubResource("LabelSettings_nr7w4")
+
+[node name="LabelPrefab2" parent="." instance=ExtResource("1_bplpb")]
+offset_left = 448.0
+offset_top = 384.0
+offset_right = 606.0
+offset_bottom = 412.0
+text = "Press 'R' to retry"
+label_settings = SubResource("LabelSettings_iuych")

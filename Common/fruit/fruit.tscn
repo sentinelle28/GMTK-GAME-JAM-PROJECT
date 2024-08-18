@@ -10,3 +10,7 @@ script = ExtResource("1_orcec")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_snta0")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true

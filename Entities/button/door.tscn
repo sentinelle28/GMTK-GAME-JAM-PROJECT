@@ -1,9 +1,45 @@
-[gd_scene load_steps=3 format=3 uid="uid://brxvvgc25huky"]
+[gd_scene load_steps=6 format=3 uid="uid://brxvvgc25huky"]
 
 [ext_resource type="Texture2D" uid="uid://r7b2sgf6ylws" path="res://Asset/TextureAsset/button/pixil-frame-2.png" id="1_2o73a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wb4bu"]
 size = Vector2(63, 63)
+
+[sub_resource type="Animation" id="Animation_6abs0"]
+resource_name = "Open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(2, 2), Vector2(1e-05, 1e-05)]
+}
+
+[sub_resource type="Animation" id="Animation_dem7g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bblmv"]
+_data = {
+"Open": SubResource("Animation_6abs0"),
+"RESET": SubResource("Animation_dem7g")
+}
 
 [node name="door" type="StaticBody2D"]
 
@@ -12,3 +48,8 @@ shape = SubResource("RectangleShape2D_wb4bu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_2o73a")
+
+[node name="animator" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_bblmv")
+}
