@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1724136143
+::res://::1724138566
 default_bus_layout.tres::AudioBusLayout::3666021546036282704::1723990629::0::1::::<><>::
 icon.svg::CompressedTexture2D::162903500137596153::1722701384::1723832307::1::::<><>::
 ::res://addons/::1723988909
@@ -114,8 +114,8 @@ Portal.gd::GDScript::-1::1723890905::0::1::::<>Node2D<>::
 Portal.tscn::PackedScene::1411641316328324558::1723896176::0::1::::<><>::res://Entities/Portal/Portal.gd<>res://Entities/Portal/PortalTweens.gd
 PortalTweens.gd::GDScript::-1::1723890785::0::1::::PortalTweens<>Area2D<>::
 ::res://Entities/water/::1724137379
-lava_activable_cell.tscn::PackedScene::676519114942924786::1724137379::0::1::::<><>::uid://d177hhg5524ed::::res://Common/activable_cell/activable_cell.tscn<>uid://bl6nd3yf2smre::::res://Asset/TextureAsset/lava/pixil-frame-3.png<>res://Entities/water/lava_activable_cell.gd
 lava_activable_cell.gd::GDScript::-1::1724137376::0::1::::<>Activable_Cell<>::
+lava_activable_cell.tscn::PackedScene::676519114942924786::1724137379::0::1::::<><>::uid://d177hhg5524ed::::res://Common/activable_cell/activable_cell.tscn<>uid://bl6nd3yf2smre::::res://Asset/TextureAsset/lava/pixil-frame-3.png<>res://Entities/water/lava_activable_cell.gd
 Water.gd::GDScript::-1::1723989828::0::1::::Water<>ActivationManager<>::
 Water.tscn::PackedScene::201100229699172668::1723989828::0::1::::<><>::res://Entities/water/Water.gd<>uid://cv5oi37uqmtmj::::res://Asset/AudioAsset/SFX/water.tres
 ::res://Entities/water/retry_layer/::1724074087
@@ -124,9 +124,9 @@ retry_layer.tscn::PackedScene::1181140063559318750::1724074087::0::1::::<><>::ui
 ::res://Scene/::1723971164
 ::res://Scene/CreditScene/::1723821000
 Credit.tscn::PackedScene::1471009934939137406::1722772519::0::1::::<><>::
-::res://Scene/GameplayScene/::1724138034
+::res://Scene/GameplayScene/::1724138130
 gameplay_scene.gd::GDScript::-1::1724136617::0::1::::<>Node2D<>::
-gameplay_scene.tscn::PackedScene::8609441126896509127::1724138034::0::1::::<><>::res://Scene/GameplayScene/gameplay_scene.gd<>uid://ckeaa1eg3hv3d::::res://Asset/level/level1.png<>uid://bac1ge1jx17ei::::res://Asset/FontAsset/Nobile-Regular.ttf<>uid://donv4gdvdbkp0::::res://Asset/level/level_2.png<>uid://blhw15ioo37ip::::res://Asset/level/level_3.png<>uid://cbdiprb0agwy::::res://Asset/level/level_4.png
+gameplay_scene.tscn::PackedScene::8609441126896509127::1724138130::0::1::::<><>::res://Scene/GameplayScene/gameplay_scene.gd<>uid://ckeaa1eg3hv3d::::res://Asset/level/level1.png<>uid://bac1ge1jx17ei::::res://Asset/FontAsset/Nobile-Regular.ttf<>uid://donv4gdvdbkp0::::res://Asset/level/level_2.png<>uid://blhw15ioo37ip::::res://Asset/level/level_3.png<>uid://cbdiprb0agwy::::res://Asset/level/level_4.png<>uid://shxjb1rbjfms::::res://Asset/level/level_5.png
 ::res://Scene/Levels/::1724138035
 level_1.tscn::PackedScene::9156644482682310448::1724136567::0::1::::<><>::uid://43o515wjffxa::::res://Common/OfficialTileMap/OfficialTileMap.tscn<>uid://dxcqexn6fvbu4::::res://Entities/Character/Player/player.tscn<>uid://cn34k2iq60lfg::::res://Entities/fruit/ananas.tscn<>uid://cpegu4j60l0e2::::res://Entities/fruit/berry.tscn<>uid://c6tlwvepaicmi::::res://Entities/end/end_level.tscn
 level_2.tscn::PackedScene::5821558150595849546::1724136567::0::1::::<><>::uid://dxcqexn6fvbu4::::res://Entities/Character/Player/player.tscn<>uid://43o515wjffxa::::res://Common/OfficialTileMap/OfficialTileMap.tscn<>uid://dyfvltr6s4hgj::::res://Entities/block/Block.tscn<>uid://cpegu4j60l0e2::::res://Entities/fruit/berry.tscn<>uid://cn34k2iq60lfg::::res://Entities/fruit/ananas.tscn<>uid://c6tlwvepaicmi::::res://Entities/end/end_level.tscn

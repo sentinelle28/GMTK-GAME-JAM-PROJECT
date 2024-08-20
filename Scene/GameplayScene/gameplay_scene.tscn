@@ -26,11 +26,12 @@ texture_normal = ExtResource("2_veywt")
 
 [node name="Label" type="Label" parent="level1"]
 layout_mode = 0
-offset_left = 68.0
-offset_top = 648.0
-offset_right = 1424.0
-offset_bottom = 1048.0
-text = "Level One"
+offset_left = -28.0
+offset_top = 636.0
+offset_right = 2493.0
+offset_bottom = 1196.0
+text = "I don't know 
+how to move"
 label_settings = SubResource("LabelSettings_sir46")
 
 [node name="level2" type="TextureButton" parent="."]
@@ -44,11 +45,11 @@ texture_normal = ExtResource("4_3xvar")
 
 [node name="Label" type="Label" parent="level2"]
 layout_mode = 0
-offset_left = 68.0
-offset_top = 648.0
-offset_right = 1424.0
-offset_bottom = 1048.0
-text = "Level Two"
+offset_left = 20.0
+offset_top = 652.0
+offset_right = 1376.0
+offset_bottom = 1052.0
+text = "Oh! a box"
 label_settings = SubResource("LabelSettings_sir46")
 
 [node name="level3" type="TextureButton" parent="."]
@@ -66,7 +67,7 @@ offset_left = 48.0
 offset_top = 656.0
 offset_right = 1404.0
 offset_bottom = 1056.0
-text = "Level Three"
+text = "The sauna"
 label_settings = SubResource("LabelSettings_sir46")
 
 [node name="level4" type="TextureButton" parent="."]
@@ -80,11 +81,12 @@ texture_normal = ExtResource("6_mmhk6")
 
 [node name="Label" type="Label" parent="level4"]
 layout_mode = 0
-offset_left = 16.0
-offset_top = 648.0
-offset_right = 1372.0
-offset_bottom = 1048.0
-text = "Level Four"
+offset_left = 8.0
+offset_top = 624.0
+offset_right = 1364.0
+offset_bottom = 1081.0
+text = "Don't press
+it"
 label_settings = SubResource("LabelSettings_sir46")
 
 [node name="level5" type="TextureButton" parent="."]
@@ -98,11 +100,11 @@ texture_normal = ExtResource("7_xpk5t")
 
 [node name="Label" type="Label" parent="level5"]
 layout_mode = 0
-offset_left = 16.0
-offset_top = 648.0
-offset_right = 1372.0
-offset_bottom = 1048.0
-text = "Level Five"
+offset_top = 620.0
+offset_right = 1356.0
+offset_bottom = 1077.0
+text = "acces
+denied"
 label_settings = SubResource("LabelSettings_sir46")
 
 [node name="Next" type="Button" parent="."]
