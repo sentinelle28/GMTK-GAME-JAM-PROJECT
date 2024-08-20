@@ -47,6 +47,7 @@ _data = {
 shape = SubResource("RectangleShape2D_wb4bu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
 texture = ExtResource("1_2o73a")
 
 [node name="animator" type="AnimationPlayer" parent="."]

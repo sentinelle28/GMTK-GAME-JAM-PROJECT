@@ -10,6 +10,7 @@ LabelPrefab = ExtResource("2_be3cx")
 AutoPanel = NodePath("Panel")
 
 [node name="Panel" type="Panel" parent="."]
+visible = false
 offset_left = -20.0
 offset_top = -20.0
 offset_right = 20.0

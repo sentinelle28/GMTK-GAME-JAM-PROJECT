@@ -30,16 +30,19 @@ grow_vertical = 2
 
 [node name="Animated_title_screen" parent="Control/VBoxContainer" instance=ExtResource("2_kercy")]
 position = Vector2(171, -45)
+Text = "An akward size"
 
 [node name="play" type="Button" parent="Control/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_ngo2p")
 text = "Play"
+flat = true
 
 [node name="tutorial" type="Button" parent="Control/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_ngo2p")
 text = "tutorial"
+flat = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_na4fk")

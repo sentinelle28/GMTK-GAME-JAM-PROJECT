@@ -2,6 +2,7 @@ extends CharacterBody2D
 class_name Player
 @export var Size:Vector2i = Vector2i(64,64)
 @onready var Stocker:Node2D = $Stocker
+
 var is_growing:bool = false
 
 var CollisionArray:Array[PushableEntities] = []
@@ -35,7 +36,6 @@ func _move()->void:
 		if direction != Vector2i.ZERO:
 			$AnimationTree["parameters/blend_position"] = Vector2(direction)
 			$walk.play()
-			
 			#verify it's not a wall 
 			_move_towards(direction)
 		

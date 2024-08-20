@@ -1,10 +1,10 @@
 res://Asset/level
+res://Asset/AudioAsset/SFX
 res://Scene/Levels
 res://Entities/end
 res://Autolaud/Level
 res://Asset/FontAsset
 res://Asset/TextureAsset/button
-res://Asset/AudioAsset/SFX
 res://Asset/theme
 res://Autolaud/paused_menu
 res://Autolaud/Settings

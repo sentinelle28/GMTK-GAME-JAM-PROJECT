@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bymd3ps1a3sq"]
+[gd_scene load_steps=6 format=3 uid="uid://bymd3ps1a3sq"]
 
 [ext_resource type="PackedScene" uid="uid://d177hhg5524ed" path="res://Common/activable_cell/activable_cell.tscn" id="1_gy148"]
 [ext_resource type="Texture2D" uid="uid://eo2s7x27d370" path="res://Asset/TextureAsset/button/pixil-frame-0.png" id="2_7fwu5"]
 [ext_resource type="Texture2D" uid="uid://dwtgnevum1yhv" path="res://Asset/TextureAsset/button/pressed_button.png" id="2_g4klj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ixoyh"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gllq0"]
 animations = [{
@@ -24,6 +26,9 @@ animations = [{
 }]
 
 [node name="Activable_cell" instance=ExtResource("1_gy148")]
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("RectangleShape2D_ixoyh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
 z_index = -1

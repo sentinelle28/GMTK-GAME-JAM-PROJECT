@@ -2,6 +2,9 @@ extends Area2D
 
 class_name Activable_Cell
 var is_colliding:bool = false
+
+
+
 func _on_body_entered(body)->void:
 	if body is Player :
 		if not body.is_growing:
@@ -23,3 +26,4 @@ func _change():
 func _process(_delta:float)->void:
 	if get_tree().current_scene.get_node("Player").is_growing:
 		get_parent().value = 0
+
