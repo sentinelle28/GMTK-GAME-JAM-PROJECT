@@ -1,5 +1,7 @@
 res://Asset/level
 res://Scene/Levels
+res://Entities/end
+res://Autolaud/Level
 res://Asset/FontAsset
 res://Asset/TextureAsset/button
 res://Asset/AudioAsset/SFX

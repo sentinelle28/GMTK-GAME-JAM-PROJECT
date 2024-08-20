@@ -22,6 +22,7 @@ InputManager="*res://Autolaud/InputManager/InputManager.gd"
 Settings="*res://Autolaud/Settings/Settings.gd"
 MainMusic="*res://Autolaud/MainMusic/main_music.tscn"
 PauseMenu="*res://Autolaud/paused_menu/pause_menu.tscn"
+LevelUnlock="*res://Autolaud/Level/LevelUnlock.gd"
 
 [editor_plugins]
 

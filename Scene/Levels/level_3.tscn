@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cqafuteiompd7"]
+[gd_scene load_steps=10 format=3 uid="uid://cqafuteiompd7"]
 
 [ext_resource type="PackedScene" uid="uid://dxcqexn6fvbu4" path="res://Entities/Character/Player/player.tscn" id="2_6daey"]
 [ext_resource type="PackedScene" uid="uid://q3fg7fa36ckk" path="res://Entities/water/retry_layer/retry_layer.tscn" id="3_cwx23"]
@@ -7,6 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://cpegu4j60l0e2" path="res://Entities/fruit/berry.tscn" id="6_7w66a"]
 [ext_resource type="PackedScene" uid="uid://cn34k2iq60lfg" path="res://Entities/fruit/ananas.tscn" id="7_gewsn"]
 [ext_resource type="PackedScene" uid="uid://43o515wjffxa" path="res://Common/OfficialTileMap/OfficialTileMap.tscn" id="7_l3o5g"]
+[ext_resource type="PackedScene" uid="uid://c6tlwvepaicmi" path="res://Entities/end/end_level.tscn" id="8_m6w08"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4mlm7"]
+size = Vector2(64, 64)
 
 [node name="Level_3" type="Node2D"]
 
@@ -108,3 +112,11 @@ layer_1/tile_data = PackedInt32Array(65535, 196609, 1, 131071, 196609, 1, 196607
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(552, 280)
 zoom = Vector2(0.96, 1)
+
+[node name="end_level" parent="." instance=ExtResource("8_m6w08")]
+position = Vector2(1096, 544)
+level_to_unlock = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="end_level"]
+position = Vector2(88, 0)
+shape = SubResource("RectangleShape2D_4mlm7")

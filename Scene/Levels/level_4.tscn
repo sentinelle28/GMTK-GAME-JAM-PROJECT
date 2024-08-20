@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c47l0spu7loao"]
+[gd_scene load_steps=10 format=3 uid="uid://c47l0spu7loao"]
 
 [ext_resource type="PackedScene" uid="uid://dxcqexn6fvbu4" path="res://Entities/Character/Player/player.tscn" id="1_tgd14"]
 [ext_resource type="PackedScene" uid="uid://43o515wjffxa" path="res://Common/OfficialTileMap/OfficialTileMap.tscn" id="2_ljb7u"]
@@ -7,6 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://bqxyg2pgc1b03" path="res://Entities/button/button.tscn" id="5_0t3si"]
 [ext_resource type="PackedScene" uid="uid://bymd3ps1a3sq" path="res://Entities/button/button_activable_cell.tscn" id="6_tc3fj"]
 [ext_resource type="PackedScene" uid="uid://brxvvgc25huky" path="res://Entities/button/door.tscn" id="7_ap8u5"]
+[ext_resource type="PackedScene" uid="uid://c6tlwvepaicmi" path="res://Entities/end/end_level.tscn" id="8_wxjsf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v2ntd"]
+size = Vector2(42, 72)
 
 [node name="level_4" type="Node2D"]
 
@@ -60,3 +64,11 @@ position = Vector2(624, -304)
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(616, 336)
 zoom = Vector2(0.7, 0.7)
+
+[node name="end_level" parent="." instance=ExtResource("8_wxjsf")]
+position = Vector2(1440, 720)
+level_to_unlock = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="end_level"]
+position = Vector2(11, 20)
+shape = SubResource("RectangleShape2D_v2ntd")

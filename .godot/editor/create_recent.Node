@@ -1,5 +1,8 @@
 Camera2D
 Node2D
+CollisionShape2D
+Button
+Area2D
 Label
 TextureButton
 AnimatedSprite2D
@@ -8,7 +11,4 @@ AudioStreamPlayer
 AnimationPlayer
 AnimationTree
 Timer
-Button
 CanvasLayer
-Sprite2D
-CollisionShape2D

@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://d3psuj6x1l0um"]
+[gd_scene load_steps=7 format=3 uid="uid://d3psuj6x1l0um"]
 
 [ext_resource type="PackedScene" uid="uid://43o515wjffxa" path="res://Common/OfficialTileMap/OfficialTileMap.tscn" id="1_ap02k"]
 [ext_resource type="PackedScene" uid="uid://dxcqexn6fvbu4" path="res://Entities/Character/Player/player.tscn" id="2_3l7f4"]
 [ext_resource type="PackedScene" uid="uid://cn34k2iq60lfg" path="res://Entities/fruit/ananas.tscn" id="3_j32s1"]
 [ext_resource type="PackedScene" uid="uid://cpegu4j60l0e2" path="res://Entities/fruit/berry.tscn" id="4_iqip0"]
+[ext_resource type="PackedScene" uid="uid://c6tlwvepaicmi" path="res://Entities/end/end_level.tscn" id="5_n1v78"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2obdx"]
+size = Vector2(122, 106)
 
 [node name="Level1" type="Node2D"]
 
@@ -36,3 +40,10 @@ position = Vector2(0, -64)
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(680, 264)
 zoom = Vector2(0.8, 0.8)
+
+[node name="end_level" parent="." instance=ExtResource("5_n1v78")]
+position = Vector2(1512, 504)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="end_level"]
+position = Vector2(-51, 43)
+shape = SubResource("RectangleShape2D_2obdx")
