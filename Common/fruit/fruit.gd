@@ -8,7 +8,10 @@ class_name Fruit
 
 func _ready()->void:
 	if is_inverted:
+		$Sprite2D/Label.text = "/"+str(New_scale)
 		New_scale = 1/New_scale
+	else:
+		$Sprite2D/Label.text = "X"+str(New_scale)
 
 func _push(direction:Vector2)->void:
 	var collid_info:KinematicCollision2D  = move_and_collide(direction*-1*Vector2(Size),true)

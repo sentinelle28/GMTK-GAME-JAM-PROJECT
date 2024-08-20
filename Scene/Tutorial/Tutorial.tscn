@@ -1,14 +1,18 @@
-[gd_scene load_steps=8 format=3 uid="uid://gokjo805sbch"]
+[gd_scene load_steps=10 format=3 uid="uid://gokjo805sbch"]
 
 [ext_resource type="PackedScene" uid="uid://43o515wjffxa" path="res://Common/OfficialTileMap/OfficialTileMap.tscn" id="1_a35uk"]
 [ext_resource type="PackedScene" uid="uid://dxcqexn6fvbu4" path="res://Entities/Character/Player/player.tscn" id="2_60m02"]
 [ext_resource type="PackedScene" uid="uid://cpegu4j60l0e2" path="res://Entities/fruit/berry.tscn" id="3_vp63r"]
 [ext_resource type="PackedScene" uid="uid://cn34k2iq60lfg" path="res://Entities/fruit/ananas.tscn" id="4_eybqm"]
 [ext_resource type="PackedScene" uid="uid://c6tlwvepaicmi" path="res://Entities/end/end_level.tscn" id="5_acdfl"]
-[ext_resource type="Texture2D" uid="uid://ckeaa1eg3hv3d" path="res://Asset/level/level1.png" id="5_l11go"]
+[ext_resource type="Texture2D" uid="uid://ckeaa1eg3hv3d" path="res://Asset/level/level_1.png" id="5_l11go"]
+[ext_resource type="FontFile" uid="uid://bac1ge1jx17ei" path="res://Asset/FontAsset/Nobile-Regular.ttf" id="7_1ptns"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0j1ln"]
 size = Vector2(66, 64)
+
+[sub_resource type="LabelSettings" id="LabelSettings_pjqnp"]
+font = ExtResource("7_1ptns")
 
 [node name="Tutorial" type="Node2D"]
 
@@ -46,10 +50,57 @@ position = Vector2(760, -64)
 
 [node name="end_level" parent="." node_paths=PackedStringArray("point_to_go", "camera") instance=ExtResource("5_acdfl")]
 position = Vector2(648, 272)
-level_to_unlock = 0
 point_to_go = NodePath("../Node2D")
 camera = NodePath("../Camera2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="end_level"]
 position = Vector2(23, 16)
 shape = SubResource("RectangleShape2D_0j1ln")
+
+[node name="Label" type="Label" parent="."]
+z_index = -1
+offset_left = -264.0
+offset_top = -144.0
+offset_right = -224.0
+offset_bottom = -121.0
+text = "Up"
+label_settings = SubResource("LabelSettings_pjqnp")
+
+[node name="Label2" type="Label" parent="."]
+z_index = -1
+offset_left = -296.0
+offset_top = -120.0
+offset_right = -256.0
+offset_bottom = -97.0
+text = "left"
+label_settings = SubResource("LabelSettings_pjqnp")
+
+[node name="Label3" type="Label" parent="."]
+z_index = -1
+offset_left = -240.0
+offset_top = -120.0
+offset_right = -200.0
+offset_bottom = -97.0
+text = "right"
+label_settings = SubResource("LabelSettings_pjqnp")
+
+[node name="Label4" type="Label" parent="."]
+z_index = -1
+offset_left = -272.0
+offset_top = -96.0
+offset_right = -229.0
+offset_bottom = -73.0
+text = "down
+"
+label_settings = SubResource("LabelSettings_pjqnp")
+
+[node name="Label6" type="Label" parent="."]
+z_index = -1
+offset_left = 416.0
+offset_top = -184.0
+offset_right = 554.0
+offset_bottom = -143.0
+text = "A problem?
+ type either 
+escape or R"
+label_settings = SubResource("LabelSettings_pjqnp")

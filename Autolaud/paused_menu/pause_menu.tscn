@@ -1,37 +1,38 @@
-[gd_scene load_steps=3 format=3 uid="uid://duv5e07o3j36w"]
+[gd_scene load_steps=5 format=3 uid="uid://duv5e07o3j36w"]
 
 [ext_resource type="Script" path="res://Autolaud/paused_menu/pause_menu.gd" id="1_byh8p"]
-[ext_resource type="Theme" uid="uid://cynf8bkxl48rb" path="res://Asset/theme/new_theme.tres" id="2_bsyah"]
+[ext_resource type="Texture2D" uid="uid://c2q364mxn43lt" path="res://Asset/menu/pixil-frame-0.png" id="2_7y020"]
+[ext_resource type="Texture2D" uid="uid://dq51xnuj8wpw2" path="res://Asset/menu/pixil-frame-1.png" id="3_fpack"]
+[ext_resource type="Texture2D" uid="uid://6b8q4ovhapbf" path="res://Asset/menu/pixil-layer-Background (4).png" id="4_ckirx"]
 
 [node name="pause_menu" type="CanvasLayer"]
 process_mode = 2
 visible = false
 script = ExtResource("1_byh8p")
 
-[node name="retry" type="Button" parent="."]
-offset_left = 384.0
-offset_top = 112.0
-offset_right = 784.0
-offset_bottom = 162.0
-theme = ExtResource("2_bsyah")
-text = "Retry"
+[node name="continue" type="TextureButton" parent="."]
+offset_left = 320.0
+offset_top = 256.0
+offset_right = 384.0
+offset_bottom = 320.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("2_7y020")
 
-[node name="continue" type="Button" parent="."]
-offset_left = 384.0
-offset_top = 224.0
-offset_right = 784.0
-offset_bottom = 274.0
-theme = ExtResource("2_bsyah")
-text = "continue"
+[node name="retry" type="TextureButton" parent="."]
+offset_left = 576.0
+offset_top = 256.0
+offset_right = 640.0
+offset_bottom = 320.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("3_fpack")
 
-[node name="home" type="Button" parent="."]
-offset_left = 392.0
-offset_top = 336.0
-offset_right = 792.0
-offset_bottom = 386.0
-theme = ExtResource("2_bsyah")
-text = "home"
+[node name="home" type="TextureButton" parent="."]
+offset_top = 512.0
+offset_right = 64.0
+offset_bottom = 576.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("4_ckirx")
 
-[connection signal="pressed" from="retry" to="." method="_on_retry_pressed"]
 [connection signal="pressed" from="continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="retry" to="." method="_on_retry_pressed"]
 [connection signal="pressed" from="home" to="." method="_on_home_pressed"]

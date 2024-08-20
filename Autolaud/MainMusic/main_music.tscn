@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://pmyermvhcfb8"]
+[gd_scene load_steps=3 format=3 uid="uid://pmyermvhcfb8"]
 
 [ext_resource type="Script" path="res://Autolaud/MainMusic/main_music.gd" id="1_buadi"]
+[ext_resource type="AudioStream" uid="uid://dgxvfp0biekv" path="res://Asset/AudioAsset/Main/calm.mp3" id="1_y7v82"]
 
 [node name="MainMusic" type="AudioStreamPlayer"]
+stream = ExtResource("1_y7v82")
 script = ExtResource("1_buadi")

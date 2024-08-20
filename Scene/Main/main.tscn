@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://c0qp7vsdfc3s2"]
+[gd_scene load_steps=6 format=3 uid="uid://c0qp7vsdfc3s2"]
 
 [ext_resource type="Script" path="res://Scene/Main/main.gd" id="1_w1f76"]
 [ext_resource type="PackedScene" uid="uid://bedc63d32lhxo" path="res://Scene/Main/Title/animated_title_screen.tscn" id="2_kercy"]
 [ext_resource type="Theme" uid="uid://cynf8bkxl48rb" path="res://Asset/theme/new_theme.tres" id="3_ngo2p"]
 [ext_resource type="AudioStream" uid="uid://108rlh7ds3nf" path="res://Asset/AudioAsset/SFX/click_2.tres" id="4_na4fk"]
+[ext_resource type="Texture2D" uid="uid://ckeaa1eg3hv3d" path="res://Asset/level/level_1.png" id="5_iy06f"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_w1f76")
@@ -16,36 +17,29 @@ offset_top = 164.0
 offset_right = 714.0
 offset_bottom = 440.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 30.0
-offset_top = 104.0
-offset_right = 30.0
-offset_bottom = 104.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Animated_title_screen" parent="Control/VBoxContainer" instance=ExtResource("2_kercy")]
-position = Vector2(171, -45)
+[node name="Animated_title_screen" parent="Control" instance=ExtResource("2_kercy")]
+position = Vector2(201, 9)
 Text = "An akward size"
 
-[node name="play" type="Button" parent="Control/VBoxContainer"]
+[node name="play" type="Button" parent="Control"]
 layout_mode = 2
+offset_left = -377.0
+offset_top = -170.0
+offset_right = 782.0
+offset_bottom = 482.0
 theme = ExtResource("3_ngo2p")
-text = "Play"
-flat = true
-
-[node name="tutorial" type="Button" parent="Control/VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("3_ngo2p")
-text = "tutorial"
 flat = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_na4fk")
 
-[connection signal="pressed" from="Control/VBoxContainer/play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/tutorial" to="." method="_on_tutorial_pressed"]
+[node name="Animated_title_screen" parent="." instance=ExtResource("2_kercy")]
+position = Vector2(583, 562)
+Text = "Click to play"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(568, 332)
+texture = ExtResource("5_iy06f")
+
+[connection signal="pressed" from="Control/play" to="." method="_on_play_pressed"]

@@ -4,6 +4,7 @@ class_name Player
 @onready var Stocker:Node2D = $Stocker
 
 var is_growing:bool = false
+var is_static:bool = true
 
 var CollisionArray:Array[PushableEntities] = []
 
@@ -33,11 +34,15 @@ func _move()->void:
 	#make sure there is no diagonal
 	if abs(direction.x) + abs(direction.y) != 2:
 		#verify that there is mouvement
+		
 		if direction != Vector2i.ZERO:
 			$AnimationTree["parameters/blend_position"] = Vector2(direction)
 			$walk.play()
 			#verify it's not a wall 
 			_move_towards(direction)
+			is_static = false
+		else:
+			is_static = true
 		
 			
 		

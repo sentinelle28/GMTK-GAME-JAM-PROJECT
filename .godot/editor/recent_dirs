@@ -1,6 +1,7 @@
+res://Scene/Levels
 res://Asset/level
 res://Asset/AudioAsset/SFX
-res://Scene/Levels
+res://Asset/menu
 res://Entities/end
 res://Autolaud/Level
 res://Asset/FontAsset
@@ -17,6 +18,4 @@ res://Common/activable_cell
 res://Entities/fruit
 res://Asset/TextureAsset/fruit
 res://Asset/TextureAsset/player
-res://Entities/Portal
 res://
-res://Entities/Character/Player

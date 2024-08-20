@@ -4,8 +4,7 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_44s8v"]
 font = ExtResource("1_7adml")
-font_size = 20
-font_color = Color(0, 0, 0, 1)
+font_size = 30
 
 [node name="LabelPrefab" type="Label"]
 label_settings = SubResource("LabelSettings_44s8v")

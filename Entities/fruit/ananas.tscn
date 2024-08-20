@@ -1,10 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://cn34k2iq60lfg"]
+[gd_scene load_steps=5 format=3 uid="uid://cn34k2iq60lfg"]
 
 [ext_resource type="PackedScene" uid="uid://cy2kcfdwbia1v" path="res://Common/fruit/fruit.tscn" id="1_11kcf"]
 [ext_resource type="Texture2D" uid="uid://87ckocwom8tx" path="res://Asset/TextureAsset/fruit/pixil-layer-Background - Frame1.png" id="2_0dnkh"]
+[ext_resource type="FontFile" uid="uid://bac1ge1jx17ei" path="res://Asset/FontAsset/Nobile-Regular.ttf" id="3_casqp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hg8bu"]
+font = ExtResource("3_casqp")
+font_color = Color(1, 0, 0, 1)
 
 [node name="ananas" instance=ExtResource("1_11kcf")]
 is_inverted = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="1"]
 texture = ExtResource("2_0dnkh")
+
+[node name="Label" type="Label" parent="Sprite2D" index="0"]
+offset_left = 8.0
+offset_top = -32.0
+offset_right = 48.0
+offset_bottom = -9.0
+text = "/2"
+label_settings = SubResource("LabelSettings_hg8bu")

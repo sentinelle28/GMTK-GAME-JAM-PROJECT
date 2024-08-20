@@ -3,5 +3,5 @@
 [ext_resource type="Texture2D" uid="uid://dljowftyxd65n" path="res://Asset/TextureAsset/block/pixil-frame-1.png" id="1_tnt3y"]
 
 [node name="DecoyBlock" type="Sprite2D"]
-z_index = -1
+z_index = -3
 texture = ExtResource("1_tnt3y")

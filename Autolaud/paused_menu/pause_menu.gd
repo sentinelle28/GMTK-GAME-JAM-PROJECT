@@ -18,3 +18,8 @@ func _on_home_pressed()->void:
 	hide()
 	get_tree().paused = false
 	SceneTransition._change_scene("res://Scene/GameplayScene/gameplay_scene.tscn")
+
+func _process(_delta:float)->void:
+	if Input.is_action_just_pressed("quit"):
+		hide()
+		get_tree().paused = false

@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dwtgnevum1yhv" path="res://Asset/TextureAsset/button/pressed_button.png" id="2_g4klj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ixoyh"]
+size = Vector2(63, 63)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gllq0"]
 animations = [{
