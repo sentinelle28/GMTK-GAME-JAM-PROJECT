@@ -2,6 +2,7 @@ extends CharacterBody2D
 class_name Player
 @export var Size:Vector2i = Vector2i(64,64)
 @onready var Stocker:Node2D = $Stocker
+var is_growing:bool = false
 
 var CollisionArray:Array[PushableEntities] = []
 
@@ -42,14 +43,29 @@ func _move()->void:
 		
 func _update_scale(Scale:float)->void:
 	var new_scale:float = Scale
-	if scale.x*new_scale >= 1:
-		scale.x *= new_scale
-		scale.y *= new_scale
+	var tween:Tween = get_tree().create_tween()
+	InputManager._set_input(false)
 	#if scale < to 1
-	elif scale.x * new_scale < 1:
-		scale.x = 1
-		scale.y = 1
+	is_growing = true
+	if scale.x * new_scale < 1:
+		new_scale = 1
+	
 	$fruit.play()
+	
+	#different animation
+	if new_scale*scale.x < scale.x:
+		tween.tween_property(self,"scale",scale*2 ,0.25)
+		tween.tween_property(self,"scale",scale*new_scale,0.25)
+	else:
+		tween.tween_property(self,"scale",scale*0.5 ,0.25)
+		tween.tween_property(self,"scale",scale*new_scale ,0.25)
+	
+	#grow process
+	await get_tree().create_timer(0.6).timeout
+	#reactivate the input
+	InputManager._set_input(true)
+	is_growing = false
+	
 	
 
 func _move_towards(direction:Vector2)->void:
@@ -59,11 +75,14 @@ func _move_towards(direction:Vector2)->void:
 			collid.get_collider()._push(direction)
 			_solve_push(direction)
 	else:
-		move_and_collide(direction * Vector2(Size) * scale.x)
+		collid = move_and_collide(direction * Vector2(Size) * scale.x)
+		if collid !=  null:
+			if collid.get_collider() is Fruit:
+				collid.get_collider()._use()
 
 
 func _solve_push(direction:Vector2)->void:
-	if CollisionArray.size()!=0:
+	if CollisionArray.size() != 0:
 		if CollisionArray[0]._check_collision(direction):
 			for pushable:PushableEntities in CollisionArray:
 				pushable.reparent(Stocker)

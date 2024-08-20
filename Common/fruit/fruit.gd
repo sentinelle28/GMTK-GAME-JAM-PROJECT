@@ -1,5 +1,6 @@
 extends PushableEntities
 
+class_name Fruit
 @export var New_scale:float = 1
 @export var is_inverted:bool = false
 @onready var Point:Node2D = get_node("Node2D")
@@ -12,10 +13,7 @@ func _ready()->void:
 func _push(direction:Vector2)->void:
 	var collid_info:KinematicCollision2D  = move_and_collide(direction*-1*Vector2(Size),true)
 	if collid_info.get_collider() is Player:
-		$AudioStreamPlayer.play()
-		collid_info.get_collider()._update_scale(New_scale)
-		collid_info.get_collider().global_position = Point.global_position
-		queue_free()
+		_use()
 		
 	else:
 		_move_towards(direction)
@@ -24,3 +22,9 @@ func _process(_delta:float)->void:
 	var shift:float = sin($Timer.time_left) * 10
 	
 	sprite.position = Vector2(0,shift)
+
+func _use()->void:
+	$AudioStreamPlayer.play()
+	player._update_scale(New_scale)
+	player.global_position = Point.global_position
+	queue_free()

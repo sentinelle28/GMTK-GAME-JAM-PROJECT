@@ -1,8 +1,9 @@
+res://Asset/level
 res://Scene/Levels
+res://Asset/FontAsset
 res://Asset/TextureAsset/button
 res://Asset/AudioAsset/SFX
 res://Asset/theme
-res://Asset/FontAsset
 res://Autolaud/paused_menu
 res://Autolaud/Settings
 res://Entities/block

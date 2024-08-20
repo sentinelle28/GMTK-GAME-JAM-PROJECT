@@ -26,5 +26,6 @@ animations = [{
 [node name="Activable_cell" instance=ExtResource("1_gy148")]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
+z_index = -1
 sprite_frames = SubResource("SpriteFrames_gllq0")
 autoplay = "default"

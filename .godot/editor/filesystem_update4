@@ -1,4 +1,6 @@
-res://Scene/Levels/level_2.tscn
-res://Common/fruit/fruit.tscn
-res://Entities/Character/Player/player.tscn
 res://Scene/Levels/level_1.tscn
+res://Entities/Character/Player/player.tscn
+res://Scene/GameplayScene/gameplay_scene.tscn
+res://Scene/Levels/level_3.tscn
+res://Scene/Levels/level_4.tscn
+res://Scene/Levels/level_2.tscn
