@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://r7b2sgf6ylws" path="res://Asset/TextureAsset/button/pixil-frame-2.png" id="1_2o73a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wb4bu"]
-size = Vector2(63, 63)
+size = Vector2(64, 64)
 
 [sub_resource type="Animation" id="Animation_6abs0"]
 resource_name = "Open"

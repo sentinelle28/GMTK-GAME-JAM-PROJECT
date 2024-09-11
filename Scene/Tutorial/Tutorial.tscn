@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://gokjo805sbch"]
+[gd_scene load_steps=11 format=3 uid="uid://gokjo805sbch"]
 
 [ext_resource type="PackedScene" uid="uid://43o515wjffxa" path="res://Common/OfficialTileMap/OfficialTileMap.tscn" id="1_a35uk"]
 [ext_resource type="PackedScene" uid="uid://dxcqexn6fvbu4" path="res://Entities/Character/Player/player.tscn" id="2_60m02"]
@@ -13,6 +13,10 @@ size = Vector2(66, 64)
 
 [sub_resource type="LabelSettings" id="LabelSettings_pjqnp"]
 font = ExtResource("7_1ptns")
+
+[sub_resource type="LabelSettings" id="LabelSettings_ugg3m"]
+font = ExtResource("7_1ptns")
+font_size = 30
 
 [node name="Tutorial" type="Node2D"]
 
@@ -96,11 +100,11 @@ label_settings = SubResource("LabelSettings_pjqnp")
 
 [node name="Label6" type="Label" parent="."]
 z_index = -1
-offset_left = 416.0
-offset_top = -184.0
-offset_right = 554.0
-offset_bottom = -143.0
+offset_left = 328.0
+offset_top = -120.0
+offset_right = 497.0
+offset_bottom = -9.0
 text = "A problem?
  type either 
 escape or R"
-label_settings = SubResource("LabelSettings_pjqnp")
+label_settings = SubResource("LabelSettings_ugg3m")

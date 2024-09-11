@@ -131,6 +131,7 @@ zoom = Vector2(0.9, 0.9)
 
 [node name="end_level" parent="." node_paths=PackedStringArray("point_to_go", "camera") instance=ExtResource("9_tqygg")]
 position = Vector2(1168, 584)
+level_to_unlock = 7
 point_to_go = NodePath("../Node2D")
 camera = NodePath("../Camera2D")
 

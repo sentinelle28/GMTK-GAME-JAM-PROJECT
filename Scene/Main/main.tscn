@@ -19,7 +19,7 @@ offset_bottom = 440.0
 
 [node name="Animated_title_screen" parent="Control" instance=ExtResource("2_kercy")]
 position = Vector2(201, 9)
-Text = "An akward size"
+Text = "An awkward size"
 
 [node name="play" type="Button" parent="Control"]
 layout_mode = 2
@@ -30,16 +30,20 @@ offset_bottom = 482.0
 theme = ExtResource("3_ngo2p")
 flat = true
 
+[node name="Animated_title_screen2" parent="Control" instance=ExtResource("2_kercy")]
+position = Vector2(212, 398)
+Text = "Click to play"
+
+[node name="Sprite2D" type="Sprite2D" parent="Control"]
+z_index = -1
+position = Vector2(213, 164)
+scale = Vector2(1.01745, 1)
+texture = ExtResource("5_iy06f")
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_na4fk")
 
-[node name="Animated_title_screen" parent="." instance=ExtResource("2_kercy")]
-position = Vector2(583, 562)
-Text = "Click to play"
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(568, 332)
-texture = ExtResource("5_iy06f")
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(584, 336)
 
 [connection signal="pressed" from="Control/play" to="." method="_on_play_pressed"]

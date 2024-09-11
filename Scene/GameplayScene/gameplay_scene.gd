@@ -45,6 +45,8 @@ func _on_level_2_pressed():
 	$AudioStreamPlayer.play()
 	if LevelUnlock._get_level(2) == true:
 		SceneTransition._change_scene("res://Scene/Levels/level_2.tscn")
+	else:
+		$AudioStreamPlayer2.play()
 	
 
 
@@ -52,18 +54,24 @@ func _on_level_3_pressed():
 	$AudioStreamPlayer.play()
 	if LevelUnlock._get_level(3) == true:
 		SceneTransition._change_scene("res://Scene/Levels/level_3.tscn")
+	else:
+		$AudioStreamPlayer2.play()
 
 
 func _on_level_4_pressed():
 	$AudioStreamPlayer.play()
 	if LevelUnlock._get_level(4) == true:
 		SceneTransition._change_scene("res://Scene/Levels/level_4.tscn")
+	else:
+		$AudioStreamPlayer2.play()
 
 
 func _on_level_5_pressed():
 	$AudioStreamPlayer.play()
 	if LevelUnlock._get_level(5) == true:
 		SceneTransition._change_scene("res://Scene/Levels/level_5.tscn")
+	else:
+		$AudioStreamPlayer2.play()
 
 func _main_music():
 	MainMusic._play()
@@ -73,15 +81,29 @@ func _on_level_6_pressed():
 	$AudioStreamPlayer.play()
 	if LevelUnlock._get_level(6) == true:
 		SceneTransition._change_scene("res://Scene/Levels/level_6.tscn")
+	else:
+		$AudioStreamPlayer2.play()
 
 
 func _on_level_7_pressed():
 	$AudioStreamPlayer.play()
 	if LevelUnlock._get_level(7) == true:
 		SceneTransition._change_scene("res://Scene/Levels/level_7.tscn")
+	else:
+		$AudioStreamPlayer2.play()
 
 
 func _on_level_8_pressed():
 	$AudioStreamPlayer.play()
 	if LevelUnlock._get_level(8) == true:
 		SceneTransition._change_scene("res://Scene/Levels/level_8.tscn")
+	else:
+		$AudioStreamPlayer2.play()
+
+
+func _on_level_9_pressed():
+	$AudioStreamPlayer.play()
+	if LevelUnlock._get_level(9) == true:
+		SceneTransition._change_scene("res://Scene/Levels/level_9.tscn")
+	else:
+		$AudioStreamPlayer2.play()

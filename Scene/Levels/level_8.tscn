@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dugw8bgvm0flj"]
+[gd_scene load_steps=12 format=3 uid="uid://dugw8bgvm0flj"]
 
 [ext_resource type="PackedScene" uid="uid://dyfvltr6s4hgj" path="res://Entities/block/Block.tscn" id="1_t3e8t"]
 [ext_resource type="PackedScene" uid="uid://c6tlwvepaicmi" path="res://Entities/end/end_level.tscn" id="2_3qt8s"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c4oddwp3f6o3" path="res://Entities/water/Water.tscn" id="7_62xnc"]
 [ext_resource type="PackedScene" uid="uid://jvyf2wj8hmn7" path="res://Entities/water/lava_activable_cell.tscn" id="8_wbgu0"]
 [ext_resource type="PackedScene" uid="uid://43o515wjffxa" path="res://Common/OfficialTileMap/OfficialTileMap.tscn" id="9_ec67p"]
+[ext_resource type="Texture2D" uid="uid://7ln6x52spi0w" path="res://Asset/level/level_9.png" id="10_grkc1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_on77k"]
 size = Vector2(58, 74)
@@ -25,6 +26,7 @@ position = Vector2(736, 160)
 position = Vector2(736, 96)
 
 [node name="end_level" parent="." node_paths=PackedStringArray("point_to_go", "camera") instance=ExtResource("2_3qt8s")]
+level_to_unlock = 9
 point_to_go = NodePath("../Node2D")
 camera = NodePath("../Camera2D")
 
@@ -108,5 +110,8 @@ position = Vector2(736, 296)
 zoom = Vector2(0.6, 0.6)
 
 [node name="Node2D" type="Node2D" parent="."]
+position = Vector2(2424, 744)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2376, 728)
+texture = ExtResource("10_grkc1")

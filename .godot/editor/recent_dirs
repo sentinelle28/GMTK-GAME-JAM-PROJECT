@@ -1,6 +1,8 @@
+C:/Users/augus/Downloads/game
+res://Asset/AudioAsset/SFX
+C:/Users/augus/Downloads
 res://Scene/Levels
 res://Asset/level
-res://Asset/AudioAsset/SFX
 res://Asset/menu
 res://Entities/end
 res://Autolaud/Level
@@ -18,4 +20,3 @@ res://Common/activable_cell
 res://Entities/fruit
 res://Asset/TextureAsset/fruit
 res://Asset/TextureAsset/player
-res://
